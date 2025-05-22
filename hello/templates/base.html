@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}My Django App{% endblock %}</title>
+    <style>
+        body {
+            /* Soft blue to purple gradient */
+            background: linear-gradient(135deg, #f0f4ff 0%, #e0e7ff 50%, #f5e8ff 100%);
+            min-height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="{% url 'home' %}">Home</a>
+        <a href="{% url 'about' %}">About</a>
+    </nav>
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>
